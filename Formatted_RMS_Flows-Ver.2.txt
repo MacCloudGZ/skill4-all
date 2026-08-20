@@ -1,0 +1,351 @@
+#=Disciplinary cases against faculty;
+#FLOW-OD-05;
+#[]->RFOIU->VPAA->President->RFOIU->[];
+#Committee on Decorum and Investigation (CODI), RFOIU;
+=Application for leave of absence (short duration);
+FLOW-NTP-01;
+[]->RFOIU->[H]->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ application ];
+
+=Application for scholarship/financial assistance (With certification of availability of funds);
+FLOW-NTP-02;
+[]->Budget->RFOIU->VPAF->President->RFOIU->[];
+HRMDU, RFOIU;
+[ application ];
+
+=Attendance to event as resource speaker(Dean/Unit);
+FLOW-NTP-03;
+[]->RFOIU->[H]->President->RFOIU->[];
+ORIGIN, [H], RFOIU;
+[ internal ];
+
+=Attendance to seminars/other similar activities;
+FLOW-NTP-04;
+[]->RFOIU->VPAF->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Claims for retirement/terminal pay, etc.;
+FLOW-NTP-05;
+[]->RFOIU->VPAF->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ internal ];
+
+=Part-time teaching;
+FLOW-NTP-12;
+[]->RFOIU->[H]->President->RFOIU->[];
+HRMDU, ORIGIN, RFOIU;
+[ internal ];
+
+=Reinstatement;
+FLOW-NTP-13;
+[]->RFOIU->VPAF->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ internal ];
+
+=Request for practice of profession;
+FLOW-NTP-14;
+[]->RFOIU->[H]->President->RFOIU->[];
+[H], HRMDU, RFOIU;
+[ internal ];
+
+=Request for Travel Authority;
+FLOW-NTP-15;
+[]->RFOIU->[H]->President->RFOIU->[];
+[ internal ];
+
+=Solicitation;
+FLOW-NTP-16;
+[]->RFOIU->VPAF->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Use of facilities/supplies/equipment;
+FLOW-NTP-17;
+[]->SPMU->RFOIU->[H]->RFOIU->[];
+SPMU, GSU, RFOIU;
+[ internal ];
+
+=Application for leave of absence;
+FLOW-TP-01;
+[]->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ application ];
+
+=Application for scholarship (With certification of availability of funds);
+FLOW-TP-02;
+[]->Budget->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ application ];
+
+=Availment of flexitime schedule/work from home;
+FLOW-TP-04;
+[]->RFOIU->VPAA->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ internal ];
+
+=Change of status of employment;
+FLOW-TP-05;
+[]->RFOIU->VPAA->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ internal ];
+
+=Claims for 1st and last payment of salary;
+FLOW-TP-07;
+[]->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Claims for financial incentives/bonuses, etc.;
+FLOW-TP-08;
+[]->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Claims for overload pay;
+FLOW-TP-09;
+[]->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Claims for retirement/terminal leave benefits;
+FLOW-TP-10;
+[]->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Conduct of Research within the school;
+FLOW-TP-11;
+[]->RDSO->RFOIU->[H]->President->RFOIU->[];
+[H], HRMDU, RFOIU;
+[ internal ];
+
+=Filing of complaint against another employee/student;
+FLOW-TP-12;
+[]->RFOIU->VPAA->President->RFOIU->[];
+RFOIU;
+[ internal ];
+
+=Permission to solicit;
+FLOW-TP-14;
+[]->RFOIU->VPAA->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ internal ];
+
+=Procurement of supplies/purchase request (with certification of availability of funds);
+FLOW-TP-15;
+[]->Budget->RFOIU->[H]->President->RFOIU->[];
+VPAF, SPMU, Procurement, RFOIU;
+[ internal ];
+
+=Request for financial assistance;
+FLOW-TP-17;
+[]->RFOIU->VPAA->President->RFOIU->[];
+VPAA, RFOIU;
+[ internal ];
+
+=Request for overtime/service credit (with certification of availability of funds);
+FLOW-TP-18;
+[]->Budget->RFOIU->VPAA->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ internal ];
+
+=Candidates for graduation;
+FLOW-OD-02;
+[]->SRR->RFOIU->VPAA->President->RFOIU->[];
+SRR, RFOIU;
+[ internal ];
+
+=Class program;
+FLOW-OD-03;
+[]->RFOIU->VPAA->President->RFOIU->[];
+VPAA, RFOIU;
+[ internal ];
+
+=Deployment of OJT/Practicum;
+FLOW-OD-04;
+[]->RFOIU->VPAA->President->RFOIU->[];
+RFOIU;
+[ internal ];
+
+=Disciplinary cases against student;
+FLOW-OD-06;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+SASO, Guidance, RFOIU;
+[ internal ];
+
+=Endorsement of Tutorial Class of Student;
+FLOW-OD-07;
+[]->RFOIU->VPAA->President->RFOIU->[];
+Accounting, RFOIU;
+[ internal ];
+
+=Endorsement of RLE Fee;
+FLOW-OD-08;
+[]->RFOIU->Accounting->VPAA->President->RFOIU->[];
+Accounting, RFOIU;
+[ internal ];
+
+=Endorsement of invitation for speaking engagement/other similar activities;
+FLOW-OD-09;
+[]->RFOIU->VPAA->President->RFOIU->[];
+[ internal ];
+
+=Financial assistance for department activities (with certification of availability of funds);
+FLOW-OD-10;
+[]->Budget->RFOIU->VPAA->President->RFOIU->[];
+RFOIU;
+[ internal ];
+
+=Hiring/employment of student assistant (with certification of availability of funds);
+FLOW-OD-12;
+[]->HRMDU->Budget->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Holding of departmental activity outside school premises;
+FLOW-OD-14;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+VPAA, SASO, RFOIU;
+[ internal ];
+
+=Opening of additional subjects;
+FLOW-OD-15;
+[]->RFOIU->VPAA->President->RFOIU->[];
+SRR, ICTU, RFOIU;
+[ internal ];
+
+=Proposed curriculum revision/enrichment;
+FLOW-OD-16;
+[]->RFOIU->VPAA->President->RFOIU->[];
+VPAA, RFOIU;
+[ internal ];
+
+=Request for reinstatement;
+FLOW-OD-17;
+[]->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Request for non-teaching personnel (with certificate of availability of funds);
+FLOW-OD-18;
+[]->HRMDU->Budget->RFOIU->VPAA->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Request for the conduct of activity (with certification of availability of funds);
+FLOW-OD-19;
+[]->Budget->RFOIU->[H]->President->RFOIU->[];
+RFOIU;
+[ internal ];
+
+=Attendance to event as resource speaker(Travel);
+FLOW-DIR-03;
+[]->RFOIU->[H]->President->RFOIU->[];
+[ internal ];
+
+=Claim for reimbursement;
+FLOW-DIR-06;
+[]->RFOIU->[H]->President->RFOIU->[];
+RFOIU;
+[ internal ];
+
+=Conduct of overtime (With certification of availability of funds);
+FLOW-DIR-07;
+[]->Budget->RFOIU->[H]->President->RFOIU->[];
+ORIGIN, HRMDU, RFOIU;
+[ internal ];
+
+=Endorsement of invitation for speaking engagement/other seminar activities;
+FLOW-DIR-08;
+[]->RFOIU->[H]->President->RFOIU->[];
+[ internal ];
+
+=Filing of intention to retire/resign;
+FLOW-DIR-10;
+[]->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Flexitime schedule/work from home;
+FLOW-DIR-11;
+[]->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Hiring/employment of non-teaching personnel (with certification of availability of funds);
+FLOW-DIR-12;
+[]->HRMDU->Budget->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Hiring of additional faculty (with certification of availability of funds);
+FLOW-DIR-13;
+[]->HRMDU->Budget->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Monetization of leave credits (With certification of availability of funds);
+FLOW-DIR-14;
+[]->Budget->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Renewal of contract of non-teaching personnel;
+FLOW-DIR-17;
+[]->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Renewal of contract of student assistant;
+FLOW-DIR-18;
+[]->RFOIU->[H]->President->RFOIU->[];
+HRMDU, RFOIU;
+[ internal ];
+
+=Attendance of officers to seminars/other similar activities (with certification of availability of funds);
+FLOW-SO-01;
+[]->SASO->[]->RFOIU->VPAA->President->RFOIU->[];
+[ internal ];
+
+=Collection of contributions;
+FLOW-SO-02;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+VPAA, ORIGIN, RFOIU;
+[ internal ];
+
+=Fund raising campaign/solicitation;
+FLOW-SO-03;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+VPAA, ORIGIN, RFOIU;
+[ internal ];
+
+=Hanging of streamers/distribution of leaflets/posting of announcement;
+FLOW-SO-04;
+[]->SASO->RFOIU->VPAF->RFOIU->[];
+VPAF, GSU, RFOIU;
+[ internal ];
+
+=Financial assistance for an activity (with certification of availability of funds);
+FLOW-SO-05;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+VPAA, RFOIU;
+[ internal ];
+
+=Holding of actvity inside the institution;
+FLOW-SO-06;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+President, SASO, RFOIU;
+[ internal ];
+
+=Holding of educational tour outside the institution;
+FLOW-SO-07;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+[ internal ];
+
+=Suspension of classes;
+FLOW-SO-08;
+[]->SASO->RFOIU->VPAA->President->RFOIU->[];
+SASO, RFOIU;
+[ internal ];
